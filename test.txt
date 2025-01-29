@@ -1,0 +1,11 @@
+curl -X GET http://127.0.0.1:8000/api/items/all
+
+curl -X POST http://127.0.0.1:8000/api/items/add \
+     -H "Content-Type: application/json" \
+     -d '{"name": "Prod", "price": 20}'
+
+curl -X PATCH http://127.0.0.1:8000/api/items/update/1 \
+     -H "Content-Type: application/json" \
+     -d '{"name": "NewName"}'
+
+curl -X DELETE http://127.0.0.1:8000/api/items/delete/1
